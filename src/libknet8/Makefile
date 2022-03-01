@@ -1,5 +1,5 @@
 NVCC := "nvcc"
-NVCCFLAGS := -O3 cudart=shared
+NVCCFLAGS := -O3 cudart=share
 
 CFLAGS := -O3 -Wall -fPIC
 OBJ := conv.o
