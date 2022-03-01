@@ -2,7 +2,7 @@ using CUDA, Libdl, Tar, SHA
 
 NVCC = nothing
 CFLAGS = Sys.iswindows() ? ["/Ox","/LD"] : ["-O3","-Wall","-fPIC","-std=c++11"]
-NVCCFLAGS = ["-O3","cudart=shared","--use_fast_math","-Wno-deprecated-gpu-targets","--default-stream", "per-thread"]
+NVCCFLAGS = ["-O3","cudart=share","--use_fast_math","-Wno-deprecated-gpu-targets","--default-stream", "per-thread"]
 
 # For compatibility with older chips, from NVIDIA samples Makefiles:
 SMS = [35, 37, 50, 52, 53, 60, 61, 62, 70, 72, 75, 80]
