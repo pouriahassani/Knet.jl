@@ -9,7 +9,7 @@ NO_FOMP := $(shell $(CXX) -fopenmp -c conv.cpp -o /dev/null > /dev/null 2>&1; ec
 
 ifeq ($(NO_FOMP),0)
   CFLAGS += -fopenmp
-endif
+en
 
 ifeq ($(NO_NVCC),0)
   CXX := $(NVCC)
