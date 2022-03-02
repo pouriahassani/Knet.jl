@@ -19,8 +19,8 @@ IteratorEltype(::Type{<:Minimize}) = Base.EltypeUnknown()
 length(m::Minimize) = length(m.data)
 size(m::Minimize,d...) = size(m.data,d...)
 
-@propagate_inbounds function iterate(m::Minimize, s...)
-    next = iterate(m.data, s...)
+propagate_inbounds function iterate(m::Minimize, s...)
+    ext = iterate(m.data, s...)
     next === nothing && return nothing
     (args, s) = next
     y = @diff m.func(args...)
