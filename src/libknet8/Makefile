@@ -3,7 +3,7 @@ NVCCFLAGS := -O3 cudart=shared
 
 CFLAGS := -O3 -Wall -fPIC
 OBJ := conv.o
-
+kir
 NO_NVCC := $(shell $(NVCC) --version > /dev/null 2>&1; echo $$?)
 NO_FOMP := $(shell $(CXX) -fopenmp -c conv.cpp -o /dev/null > /dev/null 2>&1; echo $$?)
 
